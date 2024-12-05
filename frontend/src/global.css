@@ -1,0 +1,44 @@
+
+body {
+    background-color: #e2d9c7;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+
+  }
+  
+  .article-container {
+    justify-content: center;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    margin-top: 10px; /* Add space between articles */
+  }
+  
+  .article-image img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .article-info {
+    max-width: 600px;
+    text-align: start;
+    margin-left: 2dvw;
+  }
+  
+  .article-title {
+    font-size: 2dvw;
+    font-weight: bold;
+    margin-bottom: 2dvh;
+  }
+  
+  .article-description {
+    font-size: 1dvw;
+    margin-top: 1dvh;
+  }
+  
+  .article-meta {
+    font-size: 0.9rem;
+    color: gray;
+    margin-top: 10px;
+  }
