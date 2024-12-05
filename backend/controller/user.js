@@ -15,7 +15,7 @@ Router.get("/headlines", catchAsyncErrors( async (req , res) => {
 
         })
     } catch(error) {
-        console.log(error);
+        console.log(error.response.data);
     }
 }))
 
@@ -50,22 +50,29 @@ Router.get(
 );
 
 Router.get("/news/search", async (req, res) => {
-  const { query } = req.query;
+   const { q } = req.query;
 
-  try {
-    const news = await News.find({
-      $or: [
-        { title: new RegExp(query, "i") },
-        { description: new RegExp(query, "i") },
-        { source: new RegExp(query, "i") },
-      ],
-    }).sort({ publishedAt: -1 });
+   try {
+     console.log("Received search query:", q);
+     
+     if (!q) {
+       return res.status(400).send("Query parameter is required");
+     }
 
-    res.send(news);
-  } catch (error) {
-    console.error("Error fetching news from database:", error);
-    res.status(500).send("Error fetching news from database");
-  }
+     const news = await News.find({
+       $or: [
+         { title: new RegExp(q, "i") },
+         { description: new RegExp(q, "i") },
+         { source: new RegExp(q, "i") },
+       ],
+     }).sort({ publishedAt: -1 });
+
+     console.log("Found news items:", news.length);
+     res.json(news);
+   } catch (error) {
+     console.error("Detailed database search error:", error);
+     res.status(500).send(`Internal server error: ${error.message}`);
+   }
 });
 
 
