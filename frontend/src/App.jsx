@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -10,6 +8,12 @@ function App() {
     <>
     <div className='text-sky-300 font-bold'>
       Team 8-bit. We provide news not views
+    </div> 
+    <div>
+      <input type="text" 
+    
+      placeholder='search here'/>
+      <button >go!</button>
     </div>
     </>
   )
