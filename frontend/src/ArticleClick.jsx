@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'; // Import useParams to access the URL parameters
-import styles from './ArticleClick.module.css'; // Import CSS Module
 import Header from './components/header';
 
 function ArticleClick() {
@@ -25,18 +24,18 @@ function ArticleClick() {
   }, [id]);
 
   return (
-    <div className="styles.article-container text-center mt-40  ">
+    <div className="article-container text-center mt-40  ">
       {/* Media Divisions */}
-      <div className="styles.media-columns flex justify-between">
+      <div className="media-columns flex justify-between">
         {/* Left Wing Media */}
-        <div className="styles.media-column left w-1/3">
-          <div className="styles.media-title text-4xl font-semibold ">Left Wing Media</div>
-          <div className="styles.media-content">
+        <div className="media-column left w-1/3">
+          <div className="media-title text-4xl font-semibold ">Left Wing Media</div>
+          <div className="media-content">
             <img src={articleData.image} alt="Article" className="media-image" />
-            <h3 className="styles.media-article-title">{articleData.title}</h3>
-            <p className="styles.media-article-description">{articleData.description}</p>
-            <div className="styles.media-meta">
-              <span className="styles.media-source">
+            <h3 className="media-article-title">{articleData.title}</h3>
+            <p className="media-article-description">{articleData.description}</p>
+            <div className="media-meta">
+              <span className="media-source">
                 <a href={articleData.sourceUrl} target="_blank" rel="noopener noreferrer">Source</a>
               </span> 
             </div>
@@ -44,14 +43,14 @@ function ArticleClick() {
         </div>
 
         {/* Independent Media */}
-        <div className="styles.media-column middle w-1/3 text-center">
-          <div className="styles.media-title text-4xl font-semibold">Independent Media</div>
-          <div className="styles.media-content">
-            <img src={articleData.image} alt="Article" className="styles.media-image" />
-            <h3 className="styles.media-article-title">{articleData.title}</h3>
-            <p className="styles.media-article-description">{articleData.description}</p>
-            <div className="styles.media-meta">
-              <span className="styles.media-source">
+        <div className="media-column middle w-1/3 text-center">
+          <div className="media-title text-4xl font-semibold">Independent Media</div>
+          <div className="media-content">
+            <img src={articleData.image} alt="Article" className="media-image" />
+            <h3 className="media-article-title">{articleData.title}</h3>
+            <p className="media-article-description">{articleData.description}</p>
+            <div className="media-meta">
+              <span className="media-source">
                 <a href={articleData.sourceUrl} target="_blank" rel="noopener noreferrer">Source</a>
               </span>
             </div>
@@ -59,14 +58,14 @@ function ArticleClick() {
         </div>
 
         {/* Right Wing Media */}
-        <div className="styles.media-column right w-1/3 text-center">
-          <div className="styles.media-title text-4xl font-semibold">Right Wing Media</div>
-          <div className="styles.media-content">
-            <img src={articleData.image} alt="Article" className="styles.media-image" />
-            <h3 className="styles.media-article-title">{articleData.title}</h3>
-            <p className="styles.media-article-description">{articleData.description}</p>
-            <div className="styles.media-meta">
-              <span className="styles.media-source">
+        <div className="media-column right w-1/3 text-center">
+          <div className="media-title text-4xl font-semibold">Right Wing Media</div>
+          <div className="media-content">
+            <img src={articleData.image} alt="Article" className="media-image" />
+            <h3 className="media-article-title">{articleData.title}</h3>
+            <p className="media-article-description">{articleData.description}</p>
+            <div className="media-meta">
+              <span className="media-source">
                 <a href={articleData.sourceUrl} target="_blank" rel="noopener noreferrer">Source</a>
               </span> 
             </div>
