@@ -2,14 +2,17 @@ const app = require("../app");
 const News = require("../model/news.model");
 const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const NewsAPI = require("newsapi");
+const express = require("express");
+const Router = express.Router();
 
-app.get("api/headlines", catchAsyncErrors( async (req , res) => {
+Router.get("/headlines", catchAsyncErrors( async (req , res) => {
     
     try {
         const response = await axios.get(``)
         const newsapi = new NewsAPI(`${process.env.NEWSAPI_KEY}`);
         newsapi.v2.topHeadlines({
             sources: 'bbc-news,the-verge'
+
         })
     } catch(error) {
         console.log(error);
@@ -17,14 +20,14 @@ app.get("api/headlines", catchAsyncErrors( async (req , res) => {
 }))
 
 
-app.get(
-  "/api/news",
+Router.get(
+  "/news",
   catchAsyncErrors(async (req, res) => {
     const { query } = req.query;
 
     try {
       const response = await axios.get(
-        `https://newsapi.org/v2/everything?q=${query}&apiKey=${NEWSAPI_KEY}`
+        `https://newsapi.org/v2/everything?q=${query}&apiKey=${process.env.NEWSAPI_KEY}`
       );
       const articles = response.data.articles;
 
@@ -46,7 +49,7 @@ app.get(
   })
 );
 
-app.get("/api/news/search", async (req, res) => {
+Router.get("/news/search", async (req, res) => {
   const { query } = req.query;
 
   try {
@@ -64,3 +67,6 @@ app.get("/api/news/search", async (req, res) => {
     res.status(500).send("Error fetching news from database");
   }
 });
+
+
+module.exports = Router;
