@@ -2,15 +2,15 @@ const express = require('express');
 const mongoose = require('mongoose');
 const axios = require('axios');
 const cors = require('cors');
-const dotenv = require('dotenv');
 
-dotenv.config();
+
+const NEWSAPI_KEY = 'your_newsapi_key';
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect('your_mongodb_connection_string', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -29,7 +29,7 @@ app.get('/api/news', async (req, res) => {
   const { query } = req.query;
   
   try {
-    const response = await axios.get(`https://newsapi.org/v2/everything?q=${query}&apiKey=${process.env.NEWSAPI_KEY}`);
+    const response = await axios.get(`https://newsapi.org/v2/everything?q=${query}&apiKey=${NEWSAPI_KEY}`);
     const articles = response.data.articles;
 
     const newsData = articles.map(article => ({
