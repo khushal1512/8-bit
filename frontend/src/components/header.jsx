@@ -1,17 +1,26 @@
 import React, { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 
-const Header = () => {
+const Header = ({ onCategoryChange }) => {
   const [showSearch, setShowSearch] = useState(false);
+  const [activeCategory, setActiveCategory] = useState('LATEST'); // Tracks the active category
 
   const toggleSearch = () => {
     setShowSearch((prev) => !prev);
   };
 
-  return (
-    <header className=" relative fixed -top-10  left-0 w-full font-extrabold z-50 bg-[#e2d9c7]">
-      <nav className="container mx-auto flex flex-col items-center">
+  const categories = ['LATEST','SPORTS', 'POLITICAL', 'HEALTH', 'ECONOMY'];
 
+  const handleCategoryClick = (category) => {
+    setActiveCategory(category);
+    if (onCategoryChange) {
+      onCategoryChange(category); // Pass the selected category to the parent component
+    }
+  };
+
+  return (
+    <header className="relative fixed -top-10 -mb-5 left-0 w-full font-extrabold z-50 bg-[#e2d9c7]">
+      <nav className="container mx-auto flex flex-col items-center">
         {/* Title */}
         <div className="flex justify-center cursor-default items-center" style={{ fontSize: '11dvw' }}>
           <h1 className="text-black font-extrabold">TRUTH</h1>
@@ -36,11 +45,21 @@ const Header = () => {
 
         {/* Navigation and Search */}
         <div className="flex justify-center items-center w-[98%]">
-          <ul className="flex text-xl cursor-default font-thin space-x-20">
-            {['SPORTS', 'POLITICAL', 'HEALTH', 'ECONOMY'].map((item, index) => (
-              <li key={index} className="relative group">
-                <span className="">{item}</span>
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-200  "></div>
+          <ul className="flex text-xl cursor-pointer font-thin space-x-20">
+            {categories.map((item, index) => (
+              <li
+                key={index}
+                className={`relative group ${
+                  activeCategory === item ? ' font-bold' : 'text-black'
+                }`}
+                onClick={() => handleCategoryClick(item)}
+              >
+                <span>{item}</span>
+                <div
+                  className={`absolute bottom-0 left-0 h-0.5 bg-black transition-all duration-200 ${
+                    activeCategory === item ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}
+                ></div>
               </li>
             ))}
           </ul>

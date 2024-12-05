@@ -1,42 +1,117 @@
-
+/* Body Styles */
 body {
     background-color: #e2d9c7;
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    padding-bottom: 60px; /* Make space for the Go to Top button */
+  }
+  
+  /* Stylish Scroll Bar */
+  ::-webkit-scrollbar {
+    width: 8px; /* Scrollbar width */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #b6a47b; /* Scrollbar thumb color */
+    border-radius: 8px; /* Rounded corners */
+    border: 2px solid #e2d9c7; /* Border around the thumb */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Track color */
+    border-radius: 8px; /* Rounded corners */
+  }
 
-  }
-  
-  .article-container {
-    justify-content: center;
-    display: flex;
-    flex-direction:row;
+ /* "Go to Top" Button */
+#goToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px; /* Round shape dimensions */
+    height: 50px;
+    background-color: #b6a47b; /* Light modern color */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Makes it a circle */
+    font-size: 24px; /* Slightly larger font for better visibility */
+    cursor: pointer;
+    display: none; /* Initially hidden */
     align-items: center;
-    margin-top: 10px; /* Add space between articles */
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Modern shadow effect */
+    transition: all 0.3s ease; /* Smooth hover and display transitions */
+    z-index: 1000; /* Ensures it stays on top */
   }
   
+  /* Show the button when scrolled */
+  #goToTop.show {
+    display: flex; /* Flex ensures content is centered */
+  }
+  
+  /* Hover Effect */
+  #goToTop:hover {
+    background-color: #8f7d5f; /* Slightly darker shade on hover */
+    transform: scale(1.1); /* Adds a zoom effect */
+  }
+  
+  .show {
+    display: block !important; /* Ensure the button shows when the class is added */
+  }
+
+  
+  
+  /* Article Container Styles */
+  .article-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Makes the entire article clickable */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition for background-color and box-shadow */
+    padding: 20px; /* Optional: Add some padding for better spacing */
+    padding-bottom: 20px;
+  }
+  
+  /* Hover Effect for Article Container */
+  .article-container:hover {
+    transform: scale(1.02); /* Slight zoom effect for the entire article on hover */
+    background-color: rgba(200, 183, 159, 0.257); /* Change background color to red on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
+    
+  }
+  
+  /* Article Image Styles */
   .article-image img {
-    width: 300px;
-    height: auto;
-    margin-bottom: 20px;
+    width: auto;
+    height: 250px;
+    margin-top: 0dvh;
+    margin-right: 4dvh;
+    margin-bottom: 0dvh;
+    transition: transform 0.3s ease; /* Smooth transition for pop-up effect */
   }
   
-  .article-info {
-    max-width: 600px;
-    text-align: start;
-    margin-left: 2dvw;
-  }
-  
+  /* Article Title Styles */
   .article-title {
-    font-size: 2dvw;
+    font-size: 3dvw;
     font-weight: bold;
     margin-bottom: 2dvh;
+    line-height: 1; /* Adjust the line height for better spacing */
+    position: relative;
+    display: inline-block;
+    text-decoration: none; /* Reset any default underline */
+    cursor: pointer;
+    font-style: italic;
   }
   
+  /* Article Description Styles */
   .article-description {
-    font-size: 1dvw;
+    font-size: 1.2dvw;
     margin-top: 1dvh;
   }
   
+  /* Article Meta Styles */
   .article-meta {
     font-size: 0.9rem;
     color: gray;

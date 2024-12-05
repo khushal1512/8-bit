@@ -1,0 +1,90 @@
+import React from "react";
+import Card from "./CardComp.jsx";
+import Icon1 from "./assets/icon/1.png";
+import Icon2 from "./assets/icon/2.png";
+import Icon3 from "./assets/icon/3.png";
+import { motion } from "framer-motion";
+import { SlideUp, SlideRight } from "./utility/animation.js";
+
+const Latest = () => {
+  return (
+    <section className="py-16">
+      <div className="container mx-auto px-6">
+        <div className="flex justify-between gap-6">
+          {/* Left Card with Heading */}
+          <motion.div
+            variants={SlideRight(0.2)}
+            whileInView={"animate"}
+            initial="initial"
+            className="flex-1 relative group"
+          >
+            <div className="absolute top-[-20px] left-1/2 transform -translate-x-1/2 z-10 font-poppins text-lg font-bold text-black cursor-pointer group-hover:after:w-full group-hover:after:bg-black group-hover:after:transition-all group-hover:after:duration-500 after:bg-teal-500 after:h-[2px] after:w-0 after:absolute after:left-0 after:bottom-0 [text-shadow:_0_2px_4px_rgb(99_102_241_/_0.8)]">
+              Left Lean
+            </div>
+            <Card
+              icon={Icon3}
+              heading="Tragic Murder on Edmund Pettus Bridge"
+              text="In a shocking turn of events, a murder has occurred on the historic Edmund Pettus Bridge in Selma, Alabama. The victim was found at the site where a significant march for voting rights took place in 2024."
+              author="Lucy Hiddleston"
+              time="2 hours ago"
+            />
+          </motion.div>
+
+          {/* Middle Card with Heading */}
+          <motion.div
+            variants={SlideRight(0.4)}
+            whileInView={"animate"}
+            initial="initial"
+            className="flex-1 relative group"
+          >
+            <div className="absolute top-[-20px] left-1/2 transform -translate-x-1/2 z-10 font-poppins text-lg font-bold text-black cursor-pointer group-hover:after:w-full group-hover:after:bg-black group-hover:after:transition-all group-hover:after:duration-500 after:bg-teal-500 after:h-[2px] after:w-0 after:absolute after:left-0 after:bottom-0 [text-shadow:_0_2px_4px_rgb(99_102_241_/_0.8)] ">
+              Middle Lean
+            </div>
+            <Card
+              icon={Icon2}
+              heading="Breakthrough Cancer Vaccine Shows Promising Results"
+              text="A new cancer vaccine has demonstrated significant potential in clinical trials, offering hope for advanced-stage cancer patients. This innovative treatment aims to boost the immune system's ability to fight cancer cells effectively."
+              author="Caroline Casey"
+              time="4 hours ago"
+            />
+          </motion.div>
+
+          {/* Right Card with Heading */}
+          <motion.div
+            variants={SlideRight(0.6)}
+            whileInView={"animate"}
+            initial="initial"
+            className="flex-1 relative group"
+          >
+            <div className="absolute top-[-20px] left-1/2 transform -translate-x-1/2 z-10 font-poppins text-lg font-bold text-black cursor-pointer group-hover:after:w-full group-hover:after:bg-black group-hover:after:transition-all group-hover:after:duration-500 after:bg-teal-500 after:h-[2px] after:w-0 after:absolute after:left-0 after:bottom-0 [text-shadow:_0_2px_4px_rgb(99_102_241_/_0.8)] ">
+              Right Lean
+            </div>
+            <Card
+              icon={Icon1}
+              heading="Tornado and tide warnings as Storm Hanna lashes Texas"
+              text="As Storm Hanna lashes Texas, residents are facing tornado warnings and dangerously high tides, causing widespread flooding and damage across the region. The storm has also led to significant rainfall, resulting in further flooding and travel disruptions."
+              author="Shane Sahil"
+              time="5 hours ago"
+              tag="Weather"
+              tagColor="bg-red-600"
+            />
+          </motion.div>
+        </div>
+
+        {/* View More Button */}
+        <div className="flex justify-center mt-8">
+          <motion.div
+            variants={SlideUp(0.6)}
+            whileInView={"animate"}
+            initial="initial"
+            className="bg-primary text-white px-6 py-4 rounded-lg w-fit font-bold hover:shadow-lg duration-200"
+          >
+            <button>View More</button>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Latest;
