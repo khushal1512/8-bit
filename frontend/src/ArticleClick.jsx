@@ -5,14 +5,56 @@ import Header from './components/Header'; // Import the Header component
 function ArticleClick() {
   const { id } = useParams(); // Get the article ID from the URL
   const navigate = useNavigate(); // For navigation
-  const [articleData, setArticleData] = useState({
-    title: "Breaking News: Major Event Happens",
-    description: "This is a detailed article about a major event that has occurred recently",
-    date: "December 5, 2024",
-    time: "9:00 AM",
-    sourceUrl: "https://www.news-source.com",
-    image: "/article/article.jpg", // Relative path to the image
-  });
+
+  // Update the state to hold 5 different articles
+  const [articles, setArticles] = useState([
+    {
+      title: "Breaking News: Major Event Happens",
+      description: "This is a detailed article about a major event that has occurred recently.",
+      date: "December 5, 2024",
+      time: "9:00 AM",
+      sourceUrl: "https://www.news-source.com",
+      image: "/article/article1.jpg", // Example image
+      mismatch:"HElllooooooo"
+    },
+    {
+      title: "Technology Advances: New Innovations",
+      description: "This article covers recent advancements in technology and their impact.",
+      date: "December 4, 2024",
+      time: "3:00 PM",
+      sourceUrl: "https://www.tech-source.com",
+      image: "/article/article2.jpg",
+      mismatch:"HElllooo2312312oooo"
+    },
+    {
+      title: "Health Update: Important Discoveries",
+      description: "An update on health-related discoveries and their implications.",
+      date: "December 3, 2024",
+      time: "12:00 PM",
+      sourceUrl: "https://www.health-source.com",
+      image: "/article/article3.jpg",
+      mismatch:"Hddd312oooo"
+    },
+    {
+      title: "Sports Highlights: Big Win",
+      description: "The latest sports highlight, featuring a major victory in a championship.",
+      date: "December 2, 2024",
+      time: "6:00 PM",
+      sourceUrl: "https://www.sports-source.com",
+      image: "/article/article4.jpg",
+      mismatch:"Hsadds12312oooo"
+    },
+    {
+      title: "Global Politics: Key Issues Today",
+      description: "A deep dive into global political issues and the latest developments.",
+      date: "December 1, 2024",
+      time: "10:00 AM",
+      sourceUrl: "https://www.politics-source.com",
+      image: "/article/article5.jpg",
+      mismatch:"opipoipo"
+    },
+  ]);
+  
   const [activeCategory, setActiveCategory] = useState('LATEST'); // Track active category in the article page
   const [selectedMedia, setSelectedMedia] = useState(null); // Track selected media section
   const [isHeaderVisible, setIsHeaderVisible] = useState(true); // State to track header visibility
@@ -54,6 +96,14 @@ function ArticleClick() {
     };
   }, [selectedMedia]);
 
+  // Helper function to return the correct index based on the selected media
+  const getMediaIndex = (media) => {
+    if (media === 'left') return 0;
+    if (media === 'middle') return 1;
+    if (media === 'right') return 2;
+    return 0; // Default to the first article if no valid media is selected
+  };
+
   return (
     <div>
       {/* Conditionally render Header based on isHeaderVisible */}
@@ -77,12 +127,12 @@ function ArticleClick() {
         >
           <div className="media-title text-4xl font-semibold mb-4">Left Wing Media</div>
           <div className="media-content">
-            <img src={articleData.image} alt="Article" className="media-image mb-4" />
-            <h3 className="media-article-title text-xl font-semibold mb-2">{articleData.title}</h3>
-            <p className="media-article-description text-wrap overflow-hidden text-base mb-4">{articleData.description}</p>
+            <img src={articles[0].image} alt="Article" className="media-image mb-4" />
+            <h3 className="media-article-title text-xl font-semibold mb-2">{articles[0].title}</h3>
+            <p className="media-article-description text-wrap overflow-hidden text-base mb-4">{articles[0].description}</p>
             <div className="media-meta text-sm">
               <span className="media-source">
-                <a href={articleData.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Source</a>
+                <a href={articles[0].sourceUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Source</a>
               </span>
             </div>
           </div>
@@ -95,12 +145,12 @@ function ArticleClick() {
         >
           <div className="media-title text-4xl font-semibold mb-4">Independent Media</div>
           <div className="media-content">
-            <img src={articleData.image} alt="Article" className="media-image mb-4" />
-            <h3 className="media-article-title text-xl font-semibold mb-2">{articleData.title}</h3>
-            <p className="media-article-description text-base mb-4">{articleData.description}</p>
+            <img src={articles[1].image} alt="Article" className="media-image mb-4" />
+            <h3 className="media-article-title text-xl font-semibold mb-2">{articles[1].title}</h3>
+            <p className="media-article-description text-base mb-4">{articles[1].description}</p>
             <div className="media-meta text-sm">
               <span className="media-source">
-                <a href={articleData.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Source</a>
+                <a href={articles[1].sourceUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Source</a>
               </span>
             </div>
           </div>
@@ -113,30 +163,25 @@ function ArticleClick() {
         >
           <div className="media-title text-4xl font-semibold mb-4">Right Wing Media</div>
           <div className="media-content">
-            <img src={articleData.image} alt="Article" className="media-image mb-4" />
-            <h3 className="media-article-title text-xl font-semibold mb-2">{articleData.title}</h3>
-            <p className="media-article-description text-base mb-4">{articleData.description}</p>
+            <img src={articles[2].image} alt="Article" className="media-image mb-4" />
+            <h3 className="media-article-title text-xl font-semibold mb-2">{articles[2].title}</h3>
+            <p className="media-article-description text-base mb-4">{articles[2].description}</p>
             <div className="media-meta text-sm">
               <span className="media-source">
-                <a href={articleData.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Source</a>
+                <a href={articles[2].sourceUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Source</a>
               </span>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Media Details Modal (only shows when media is selected) */}
+      {/* Display Media Details Modal */}
       {selectedMedia && (
         <div className="media-details fixed top-20 left-1/2 transform -translate-x-1/2 bg-white p-8 z-20 max-h-[80vh] overflow-y-auto">
-          <h3 className="text-3xl font-semibold mb-4">FULL ARTICLE</h3>
-          <img src={articleData.image} alt="Detailed" className="media-image mb-4" />
-          <h3 className="media-article-title text-2xl font-semibold mb-4">{articleData.title}</h3>
-          <p className=" mb-4">{articleData.description}</p>
-          <div className="media-meta text-sm mb-4">
-            <span className="media-source">
-              <a href={articleData.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Source</a>
-            </span>
-          </div>
+          <h3 className="text-3xl font-semibold mb-4">{articles[getMediaIndex(selectedMedia)].title}</h3>
+          <p className="text-xl">{articles[getMediaIndex(selectedMedia)].description}</p>
+          <h2 className="text-red-600 font-bold">Mismatch: </h2>
+          <p>{articles[getMediaIndex(selectedMedia)].mismatch}</p>
         </div>
       )}
     </div>

@@ -13,7 +13,7 @@ function App() {
     {
       category: 'LATEST',
       title: 'Trump has won the 2025 US Elections',
-      description: 'The Republican Party has beaten the Democrates with a huge margin',
+      description: 'The Republican Party has beaten the Democrats with a huge margin',
       date: '2024-11-06',
       time: '9:00 AM',
       image: '/article/trump.jpeg',
@@ -25,28 +25,32 @@ function App() {
       date: '2024-11-06',
       time: '9:00 AM',
       image: '/article/article.jpg',
-    },{
+    },
+    {
       category: 'LATEST',
       title: '3',
       description: 'This is a LATEST news article.',
       date: 'December 5, 2024',
       time: '9:00 AM',
       image: '/article/article.jpg',
-    },{
+    },
+    {
       category: 'LATEST',
       title: '4',
       description: 'This is a LATEST news article.',
       date: 'December 5, 2024',
       time: '9:00 AM',
       image: '/article/article.jpg',
-    },{
+    },
+    {
       category: 'LATEST',
       title: '5',
       description: 'This is a LATEST news article.',
       date: 'December 5, 2024',
       time: '9:00 AM',
       image: '/article/article.jpg',
-    },{
+    },
+    {
       category: 'LATEST',
       title: '6',
       description: 'This is a LATEST news article.',
@@ -161,12 +165,8 @@ function App() {
               </div>
             </Link>
           </div>
-          
         ))}
-        
-      
       </div>
-      
 
       {/* Go to Top Button */}
       <button id="goToTop" onClick={scrollToTop} className="go-to-top-btn">
