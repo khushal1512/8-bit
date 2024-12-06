@@ -13,10 +13,10 @@ function App() {
     {
       category: 'LATEST',
       title: 'Trump has won the 2025 US Elections',
-      description: 'Analyzing Kamala Harris Loss and Trumps Win: Five Key Factors Behind the Democratic Setback',
+      description: 'The Republican Party has beaten the Democrates with a huge margin',
       date: '2024-11-06',
       time: '9:00 AM',
-      image: '/article/article.jpg',
+      image: '/article/trump.jpeg',
     },
     {
       category: 'LATEST',
