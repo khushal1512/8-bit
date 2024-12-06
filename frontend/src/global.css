@@ -91,6 +91,14 @@ body {
     margin-bottom: 0dvh;
     transition: transform 0.3s ease; /* Smooth transition for pop-up effect */
   }
+  /* Truncate text after a certain number of lines */
+.truncate-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 8; /* Adjust the number of lines here */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
   
   /* Article Title Styles */
   .article-title {
