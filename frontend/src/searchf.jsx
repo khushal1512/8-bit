@@ -38,9 +38,9 @@ const handleArticleClick = async (article) => {
     setLoading(true);
     try {
       const responses = await Promise.all([
-        fetch(`https://newsapi.org/v2/everything?q=${query}&pageSize=1&sources=cnn&apiKey=ae7b36161fc94081939f943c5971fc13`),
-        fetch(`https://newsapi.org/v2/everything?q=${query}&pageSize=1&sources=al-jazeera-english&apiKey=ae7b36161fc94081939f943c5971fc13`),
-        fetch(`https://newsapi.org/v2/everything?q=${query}&pageSize=1&sources=fox-news&apiKey=ae7b36161fc94081939f943c5971fc13`),
+        fetch(`https://newsapi.org/v2/everything?q=${query}&pageSize=1&sources=cnn&apiKey=3d63998bb81c455eaf8bed11487c53e4`),
+        fetch(`https://newsapi.org/v2/everything?q=${query}&pageSize=1&sources=al-jazeera-english&apiKey=3d63998bb81c455eaf8bed11487c53e4`),
+        fetch(`https://newsapi.org/v2/everything?q=${query}&pageSize=1&sources=fox-news&apiKey=3d63998bb81c455eaf8bed11487c53e4`),
       ]);
       const [data1, data2, data3] = await Promise.all(responses.map((res) => res.json()));
 

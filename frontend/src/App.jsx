@@ -16,7 +16,7 @@ function App() {
       description: 'The US Congress has passed a $1.9 trillion relief bill aimed at providing economic support to citizens and businesses affected by the COVID-19 pandemic.',
       date: '2024-12-01',
       time: '10:00 AM',
-      image: '/article/us_relief_bill.jpg',
+      image: '/article/trump.jpeg',
     },
     {
       category: 'LATEST',
@@ -24,7 +24,7 @@ function App() {
       description: 'Delhi’s air quality continues to deteriorate as residents face a toxic mix of pollution, leading to health concerns across the city.',
       date: '2024-12-05',
       time: '9:30 AM',
-      image: '/article/india_air_pollution.jpg',
+      image: '/article/airpollution.jpg',
     },
     {
       category: 'LATEST',
@@ -32,7 +32,7 @@ function App() {
       description: 'NASA has launched a new mission to explore Mars, aiming to gather data that will help understand the planet’s potential for supporting human life.',
       date: '2024-12-03',
       time: '12:00 PM',
-      image: '/article/us_mars_mission.jpg',
+      image: '/article/mars.jpg',
     },
     {
       category: 'LATEST',
@@ -40,7 +40,7 @@ function App() {
       description: 'India’s GDP growth for the third quarter of 2024 has accelerated to 6.5%, signaling a strong recovery post-pandemic.',
       date: '2024-12-04',
       time: '2:00 PM',
-      image: '/article/india_gdp_growth.jpg',
+      image: '/article/gdp.jpg',
     },
     {
       category: 'SPORTS',
@@ -48,7 +48,7 @@ function App() {
       description: 'The US women’s basketball team has clinched the gold medal at the Paris 2024 Olympics, defeating Spain in the finals.',
       date: '2024-12-02',
       time: '8:00 AM',
-      image: '/article/us_womens_basketball.jpg',
+      image: '/article/basketball.jpg',
     },
     {
       category: 'SPORTS',
@@ -56,7 +56,7 @@ function App() {
       description: 'India’s cricket star, Virat Kohli, has set a new record as the highest run scorer in T20 World Cup history.',
       date: '2024-12-01',
       time: '11:30 AM',
-      image: '/article/india_virat_kohli.jpg',
+      image: '/article/kohli.jpg',
     },
     {
       category: 'POLITICAL',
@@ -64,7 +64,7 @@ function App() {
       description: 'Amid growing scandals, US President faces impeachment proceedings in Congress over alleged misuse of power and corruption.',
       date: '2024-11-29',
       time: '4:00 PM',
-      image: '/article/us_impeachment.jpg',
+      image: '/article/impeachment.jpg',
     },
     {
       category: 'POLITICAL',
@@ -72,7 +72,7 @@ function App() {
       description: 'The Indian Parliament has passed new farm laws, sparking protests among farmers who argue these laws will harm their livelihoods.',
       date: '2024-11-28',
       time: '3:00 PM',
-      image: '/article/india_farm_laws.jpg',
+      image: '/article/farm.jpeg',
     },
     {
       category: 'HEALTH',
@@ -80,7 +80,7 @@ function App() {
       description: 'Health experts in the US are warning of a potential flu surge this winter, urging citizens to get vaccinated as cases rise.',
       date: '2024-12-01',
       time: '5:00 PM',
-      image: '/article/us_flu_cases.jpg',
+      image: '/article/cvd.jpg',
     },
     {
       category: 'HEALTH',
@@ -88,7 +88,7 @@ function App() {
       description: 'The Indian government has introduced new guidelines to address the potential third wave of COVID-19, focusing on vaccinations and containment measures.',
       date: '2024-11-30',
       time: '6:00 PM',
-      image: '/article/india_covid_guidelines.jpg',
+      image: '/article/flu.jpg',
     },
     {
       category: 'ECONOMY',
@@ -96,7 +96,7 @@ function App() {
       description: 'In a move to curb inflation, the US Federal Reserve has raised interest rates for the second time this year, signaling its commitment to controlling prices.',
       date: '2024-12-02',
       time: '7:00 AM',
-      image: '/article/us_interest_rates.jpg',
+      image: 'frontend/public/article/interest.jpeg',
     },
     {
       category: 'ECONOMY',
@@ -104,7 +104,7 @@ function App() {
       description: 'India’s stock market has reached a record high, driven by investor optimism following strong GDP growth and robust corporate earnings.',
       date: '2024-12-04',
       time: '9:00 AM',
-      image: '/article/india_stock_market.jpg',
+      image: 'frontend/public/article/anne-nygard-tcJ6sJTtTWI-unsplash.jpg',
     },
   ];
 
