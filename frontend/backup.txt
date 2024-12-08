@@ -1,0 +1,304 @@
+// import { useState } from 'react';
+// import './App.css';
+// import './global.css';
+// import Header from './components/header';
+
+// function App() {
+//   const [count, setCount] = useState(0);
+
+//   return (
+//     <div className="app-container">
+
+//       {/* Main Content Section */}
+//       <div className="article-container border-2 mt-2 border-black flex container mx-auto">
+//       <a href="https://www.google.com" className="article-container">
+//         <div className="article-image">
+//           <img 
+//             src="/article/article.jpg"
+//             alt="Article" 
+//             className="article-img" 
+//           />
+//         </div>
+
+//         <div className="article-info flex-1 p-4">
+//           <h2 className="article-title">Breaking News: Major Event Happens</h2>
+//           <p className="article-description">
+//             A brief description of the news article goes here. This is where the summary of the article will be displayed to give readers an overview of the content.
+//           </p>
+//           <div className="article-meta">
+//             <span className="article-date">December 5, 2024</span>
+//             <span className="article-time">10:30 AM</span>
+//           </div>
+//         </div>
+//         </a>
+//       </div>
+//       <div className="article-container border-2 mt-8 border-black flex container mx-auto">
+//       <a href="https://www.google.com" className="article-container">
+//         <div className="article-image">
+//           <img 
+//             src="/article/article.jpg"
+//             alt="Article" 
+//             className="article-img" 
+//           />
+//         </div>
+
+//         <div className="article-info flex-1 p-4">
+//           <h2 className="article-title">Breaking News: Major Event Happens</h2>
+//           <p className="article-description">
+//             A brief description of the news article goes here. This is where the summary of the article will be displayed to give readers an overview of the content.
+//           </p>
+//           <div className="article-meta">
+//             <span className="article-date">December 5, 2024</span>
+//             <span className="article-time">10:30 AM</span>
+//           </div>
+//         </div>
+//         </a>
+//       </div>
+      
+
+//       <div className="article-container border-2 mt-8 border-black flex container mx-auto">
+//       <a href="https://www.google.com" className="article-container">
+//         <div className="article-image">
+//           <img 
+//             src="/article/article.jpg"
+//             alt="Article" 
+//             className="article-img" 
+//           />
+//         </div>
+
+//         <div className="article-info flex-1 p-4">
+//           <h2 className="article-title">Breaking News: Major Event Happens</h2>
+//           <p className="article-description">
+//             A brief description of the news article goes here. This is where the summary of the article will be displayed to give readers an overview of the content.
+//           </p>
+//           <div className="article-meta">
+//             <span className="article-date">December 5, 2024</span>
+//             <span className="article-time">10:30 AM</span>
+//           </div>
+//         </div>
+//         </a>
+//       </div>
+      
+
+//       <div className="article-container border-2 mt-8 border-black flex container mx-auto">
+//       <a href="https://www.google.com" className="article-container">
+//         <div className="article-image">
+//           <img 
+//             src="/article/article.jpg"
+//             alt="Article" 
+//             className="article-img" 
+//           />
+//         </div>
+
+//         <div className="article-info flex-1 p-4">
+//           <h2 className="article-title">Breaking News: Major Event Happens</h2>
+//           <p className="article-description">
+//             A brief description of the news article goes here. This is where the summary of the article will be displayed to give readers an overview of the content.
+//           </p>
+//           <div className="article-meta">
+//             <span className="article-date">December 5, 2024</span>
+//             <span className="article-time">10:30 AM</span>
+//           </div>
+//         </div>
+//         </a>
+//       </div>
+      
+
+//       <div className="article-container border-2 mt-8 border-black flex container mx-auto">
+//       <a href="https://www.google.com" className="article-container">
+//         <div className="article-image">
+//           <img 
+//             src="/article/article.jpg"
+//             alt="Article" 
+//             className="article-img" 
+//           />
+//         </div>
+
+//         <div className="article-info flex-1 p-4">
+//           <h2 className="article-title">Breaking News: Major Event Happens</h2>
+//           <p className="article-description">
+//             A brief description of the news article goes here. This is where the summary of the article will be displayed to give readers an overview of the content.
+//           </p>
+//           <div className="article-meta">
+//             <span className="article-date">December 5, 2024</span>
+//             <span className="article-time">10:30 AM</span>
+//           </div>
+//         </div>
+//         </a>
+//       </div>
+      
+
+//       <div className="article-container border-2 mt-8 border-black flex container mx-auto">
+//       <a href="https://www.google.com" className="article-container">
+//         <div className="article-image">
+//           <img 
+//             src="/article/article.jpg"
+//             alt="Article" 
+//             className="article-img" 
+//           />
+//         </div>
+
+//         <div className="article-info flex-1 p-4">
+//           <h2 className="article-title">Breaking News: Major Event Happens</h2>
+//           <p className="article-description">
+//             A brief description of the news article goes here. This is where the summary of the article will be displayed to give readers an overview of the content.
+//           </p>
+//           <div className="article-meta">
+//             <span className="article-date">December 5, 2024</span>
+//             <span className="article-time">10:30 AM</span>
+//           </div>
+//         </div>
+//         </a>
+//       </div>
+      
+
+//       <div className="article-container border-2 mt-8 border-black flex container mx-auto">
+//       <a href="https://www.google.com" className="article-container">
+//         <div className="article-image">
+//           <img 
+//             src="/article/article.jpg"
+//             alt="Article" 
+//             className="article-img" 
+//           />
+//         </div>
+
+//         <div className="article-info flex-1 p-4">
+//           <h2 className="article-title">Breaking News: Major Event Happens</h2>
+//           <p className="article-description">
+//             A brief description of the news article goes here. This is where the summary of the article will be displayed to give readers an overview of the content.
+//           </p>
+//           <div className="article-meta">
+//             <span className="article-date">December 5, 2024</span>
+//             <span className="article-time">10:30 AM</span>
+//           </div>
+//         </div>
+//         </a>
+//       </div>
+      
+
+//       <div className="article-container border-2 mt-8 border-black flex container mx-auto">
+//       <a href="https://www.google.com" className="article-container">
+//         <div className="article-image">
+//           <img 
+//             src="/article/article.jpg"
+//             alt="Article" 
+//             className="article-img" 
+//           />
+//         </div>
+
+//         <div className="article-info flex-1 p-4">
+//           <h2 className="article-title">Breaking News: Major Event Happens</h2>
+//           <p className="article-description">
+//             A brief description of the news article goes here. This is where the summary of the article will be displayed to give readers an overview of the content.
+//           </p>
+//           <div className="article-meta">
+//             <span className="article-date">December 5, 2024</span>
+//             <span className="article-time">10:30 AM</span>
+//           </div>
+//         </div>
+//         </a>
+//       </div>
+      
+      
+      
+      
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+
+
+import { useState, useEffect } from 'react';
+import './App.css';
+import './global.css';
+import Header from './components/header';
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  // Show Go to Top button on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const button = document.getElementById('goToTop');
+      if (window.scrollY > 100) {
+        button.classList.add('show');
+      } else {
+        button.classList.remove('show');
+      }
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+  
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <div className="app-container">
+      {/* Main Content Section */}
+      <div className="article-container border-2 mt-2 border-black flex container mx-auto">
+        <a href="/newspage" className="article-container">
+          <div className="article-image">
+            <img 
+              src="/article/article.jpg"
+              alt="Article" 
+              className="article-img" 
+            />
+          </div>
+
+          <div className="article-info flex-1 p-4">
+            <h2 className="article-title">Breaking News: Major Event Happens</h2>
+            <p className="article-description">
+              A brief description of the news article goes here. This is where the summary of the article will be displayed to give readers an overview of the content.
+            </p>
+            <div className="article-meta">
+              <span className="article-date">December 5, 2024</span>
+              <span className="article-time">10:30 AM</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div className="article-container border-2 mt-10 border-black flex container mx-auto">
+        <a href="/newspage" className="article-container">
+          <div className="article-image">
+            <img 
+              src="/article/article.jpg"
+              alt="Article" 
+              className="article-img" 
+            />
+          </div>
+
+          <div className="article-info flex-1 p-4">
+            <h2 className="article-title">Breaking News: Major Event Happens</h2>
+            <p className="article-description">
+              A brief description of the news article goes here. This is where the summary of the article will be displayed to give readers an overview of the content.
+            </p>
+            <div className="article-meta">
+              <span className="article-date">December 5, 2024</span>
+              <span className="article-time">10:30 AM</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      
+
+      {/* Go to Top Button */}
+      <button id="goToTop" onClick={scrollToTop}>
+  ↑
+</button>
+    </div>
+  );
+}
+
+export default App;
